@@ -33,7 +33,6 @@
     justify-items: center;
 }
 
-/* Card wrapper */
 .work-card {
     background: #1a1a1a;
     border-radius: 12px;
@@ -65,7 +64,6 @@
     border-radius: 10px;
 }
 
-/* Buttons container */
 .work-buttons {
     display: flex;
     justify-content: center;
@@ -73,7 +71,6 @@
     margin-top: 12px;
 }
 
-/* Common button styles */
 .btn {
     padding: 10px 18px;
     border-radius: 8px;
@@ -122,9 +119,8 @@
     transition: 0.6s;
 }
 
-/* ------------------- Responsive Styles ------------------- */
+/* ------------------- media queries------------------- */
 
-/* Tablets */
 @media (max-width: 1024px) {
     .mywork {
         margin: 60px 100px;
@@ -136,7 +132,6 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .mywork {
         margin: 40px 40px;
@@ -162,7 +157,6 @@
     }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
     .mywork {
         margin: 30px 20px;

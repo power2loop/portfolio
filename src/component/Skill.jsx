@@ -1,7 +1,6 @@
 import React from 'react';
 import './Skill.css';
 import theme_pattern from '../assets/theme_pattern.svg'
-// Import images
 import reactLogo from '../assets/React.png'
 import jsLogo from "../assets/javascript.png";
 import nodeLogo from "../assets/node-js.png";
@@ -44,7 +43,6 @@ const Skill = () => {
                         </div>
                     ))}
 
-                    {/* Duplicate set for smooth infinite loop */}
                     {skills.map((skill, index) => (
                         <div key={index + skills.length} className="skill-card">
                             <img src={skill.icon} alt={skill.name} className="skill-icon" />

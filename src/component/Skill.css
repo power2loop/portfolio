@@ -83,9 +83,8 @@
     }
 }
 
-/* ------------------- Responsive Styles ------------------- */
+/* ------------------- media queries------------------- */
 
-/* Tablets */
 @media (max-width: 1024px) {
     .skill-heading h1 {
         font-size: 55px;
@@ -107,7 +106,6 @@
 
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .skill-heading h1 {
         font-size: 40px;
@@ -135,7 +133,6 @@
     }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
     .skill-heading h1 {
         font-size: 28px;

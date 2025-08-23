@@ -19,12 +19,10 @@ const Navbar = () => {
         <div className="navbar">
             <img className="logo" src={logo} alt="Logo" />
 
-            {/* Hamburger Icon (only visible on mobile) */}
             <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? <HiX size={30} /> : <HiOutlineMenuAlt3 size={30} />}
             </div>
 
-            {/* Nav Menu */}
             <ul className={`nav-menu ${isOpen ? "open" : ""}`}>
                 <li>
                     <AnchorLink className="anchor-link" href="#home">

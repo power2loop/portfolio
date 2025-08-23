@@ -42,7 +42,6 @@
     font-size: 24px;
     font-weight: 500;
     flex-wrap: wrap;
-    /* ensures buttons don't overflow */
     justify-content: center;
 }
 
@@ -80,9 +79,9 @@
     text-decoration: none;
 }
 
-/* ------------------- Responsive Styles ------------------- */
+/* ------------------- media queries------------------- */
 
-/* Tablets */
+
 @media (max-width: 1024px) {
     .hero img {
         width: 120px;
@@ -110,7 +109,6 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .hero img {
         width: 100px;
@@ -142,7 +140,6 @@
     }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
     .hero {
         padding: 1.5rem 1rem;

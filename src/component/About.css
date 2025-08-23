@@ -95,9 +95,8 @@
     color: #B923E1;
 }
 
-/* ------------------- Responsive Styles ------------------- */
+/* ------------------- media queries------------------- */
 
-/* Tablets */
 @media (max-width: 1024px) {
     .about-title h1 {
         font-size: 48px;
@@ -116,7 +115,6 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
@@ -152,7 +150,6 @@
     }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
     .about {
         padding: 30px 15px;

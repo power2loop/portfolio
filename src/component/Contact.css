@@ -73,7 +73,7 @@
     line-height: 50px;
 }
 
-/* Right */
+
 .contact-right {
     display: flex;
     flex-direction: column;
@@ -135,7 +135,7 @@ span {
     margin: auto;
 }
 
-/* ================= MEDIA QUERIES ================= */
+/* ------------------- media queries------------------- */
 
 @media (max-width: 1024px) {
     .contact {

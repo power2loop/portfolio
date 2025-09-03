@@ -38,14 +38,14 @@ const mywork_data = [
     {
         w_no: 5,
         w_name: "Web design",
-        w_img: project5_img,
+        w_img: project6_img,
         github: "https://github.com/power2loop/Weather-App",
         live: "https://weather-app-psi-eight-12.vercel.app/"
     },
     {
         w_no: 6,
         w_name: "Web design",
-        w_img: project6_img,
+        w_img: project5_img,
         github: "https://github.com/power2loop/To-Do-List",
         live: "https://to-do-list-cyan-kappa-83.vercel.app/"
     },

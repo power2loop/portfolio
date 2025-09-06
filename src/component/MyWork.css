@@ -26,62 +26,149 @@
 }
 
 .mywork-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 40px;
     width: 100%;
-    justify-items: center;
+    max-width: 1200px;
 }
 
 .work-card {
+    display: flex;
     background: #1a1a1a;
     border-radius: 12px;
     padding: 20px;
-    text-align: center;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
-    max-width: 369px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 .work-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
-.work-card img {
+.work-left {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.work-image {
     width: 100%;
     height: 220px;
-    object-fit: cover;
-    display: block;
+    /* Increased height to show more of the image */
     border-radius: 10px;
+    overflow: hidden;
+    /* Ensures rounded corners work properly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2a2a2a;
+    /* Fallback background color */
 }
 
-
-
-.work-card img:hover {
-    transform: scale(1.05);
-    border: 3px solid #ff00ff;
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Changed from 'cover' to 'contain' to show full image */
     border-radius: 10px;
+    transition: transform 0.3s ease;
+    background: white;
+    /* White background for better visibility */
+}
+
+.work-image img:hover {
+    transform: scale(1.05);
+    /* Slightly increased hover effect */
 }
 
 .work-buttons {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    margin-top: 12px;
+    justify-content: center;
+    /* Center the buttons instead of margin-left */
+}
+
+.work-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.work-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.work-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.tech-label {
+    font-weight: 500;
+    color: #ccc;
+}
+
+.tech-list {
+    color: #B923E1;
+    font-weight: 500;
+    margin-left: -8px;
+
+}
+
+.work-description {
+    flex: 1;
+}
+
+.work-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.work-description li {
+    position: relative;
+    padding-left: 20px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.work-description li::before {
+    content: "•";
+    color: #B923E1;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .btn {
-    padding: 10px 18px;
+    padding: 12px 24px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
     border: none;
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
+    /* Make buttons equal width */
+    max-width: 100px;
+    /* Limit button width */
 }
 
 .btn.github {
@@ -91,7 +178,7 @@
 
 .btn.github:hover {
     background: #444c56;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .btn.live {
@@ -101,7 +188,7 @@
 
 .btn.live:hover {
     background: #9b1dbd;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .mywork-showmore {
@@ -115,6 +202,7 @@
     margin-bottom: 40px;
     transition: 0.6s;
     cursor: pointer;
+    color: white;
 }
 
 .mywork-showmore:hover {
@@ -122,44 +210,95 @@
     transition: 0.6s;
 }
 
-/* ------------------- media queries------------------- */
-
+/* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
-    .mywork-container {
-        grid-template-columns: repeat(2, 1fr);
+    .mywork {
+        margin: 60px 40px;
+    }
+
+    .work-card {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .work-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .work-image {
+        height: 200px;
+    }
+
+    .work-buttons {
+        justify-content: center;
+        margin-left: 0;
+        /* Remove margin-left for mobile */
     }
 }
 
 @media (max-width: 768px) {
-    .mywork-container {
-        grid-template-columns: 1fr;
+    .mywork {
+        margin: 40px 20px;
+        gap: 60px;
+    }
+
+    .work-card {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .work-image {
+        height: 180px;
+    }
+
+    .work-title {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 14px;
+        max-width: 80px;
     }
 }
 
-
 @media (max-width: 480px) {
     .mywork {
-        margin: 30px 20px;
+        margin: 30px 15px;
         gap: 40px;
     }
 
     .mywork-title h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
-    .work-card img {
-        height: 150px;
+    .work-card {
+        padding: 15px;
+    }
+
+    .work-image {
+        height: 160px;
+    }
+
+    .work-title {
+        font-size: 18px;
+    }
+
+    .work-buttons {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .btn {
-        padding: 8px 14px;
-        font-size: 14px;
+        text-align: center;
+        padding: 12px 20px;
+        max-width: none;
+        /* Remove max-width for mobile */
     }
 
     .mywork-showmore {
-        padding: 14px 20px;
+        padding: 15px 20px;
         font-size: 16px;
     }
-
-
 }

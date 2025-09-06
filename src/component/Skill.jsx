@@ -12,6 +12,7 @@ import cssLogo from "../assets/Css.png";
 import cppLogo from "../assets/c++.png";
 import pythonLogo from "../assets/python.png";
 import tailwindlogo from "../assets/tailwind.png"
+import PostgreSQLlogo from "../assets/postgreysql.png"
 
 const Skill = () => {
     const skills = [
@@ -26,6 +27,7 @@ const Skill = () => {
         { name: "Tailwind", icon: tailwindlogo },
         { name: "C++", icon: cppLogo },
         { name: "Python", icon: pythonLogo },
+        { name: "PostgreySQL", icon: PostgreSQLlogo },
     ];
 
     return (
